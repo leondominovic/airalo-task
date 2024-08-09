@@ -5,8 +5,8 @@ import {SimsListResponse} from "../lib/model/sims.list.response";
 
 test.describe.configure({ mode: 'serial' });
 
-let orderedESimIds;
-let apiClient;
+let orderedESimIds: number[];
+let apiClient: ApiClient;
 
 test.beforeAll(async({request}) => {
   apiClient = await ApiClient.init(request);
